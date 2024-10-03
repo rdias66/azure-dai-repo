@@ -1,15 +1,15 @@
 module "vm" {
-  source              = "./modules/vm"
-  resource_group_name = "rg-azure-fullstack"
-  location            = "East US"
-  vnet_name           = "vnet-fullstack"
-  vnet_address_space  = ["10.0.0.0/16"]
-  subnet_name         = "subnet-fullstack"
-  subnet_prefix       = ["10.0.1.0/24"]
-  nic_name            = "nic-fullstack"
-  vm_name             = "vm-fullstack"
-  vm_size             = "Standard_B1s"
-  vm_admin_username   = "adminuser"
-  vm_admin_password   = "your_password_here"
-  nsg_name            = "nsg-fullstack"
+  source              = "../modules/vm"
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  vnet_name           = var.vnet_name
+  vnet_address_space  = var.vnet_address_space
+  subnet_name         = var.subnet_name
+  subnet_prefix       = var.subnet_prefix
+  nic_name            = var.nic_name
+  vm_name             = var.vm_name
+  vm_size             = var.vm_size
+  vm_admin_username   = var.vm_admin_username
+  vm_admin_password   = var.vm_admin_username
+  nsg_name            = var.nsg_name
 }

@@ -6,7 +6,7 @@ variable "resource_group_name" {
 variable "location" {
   type        = string
   description = "Location of the resources"
-  default     = "East US"  # Adjust based on your preferred region
+  default     = "Brazil South" 
 }
 
 variable "vnet_name" {
